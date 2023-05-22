@@ -4,8 +4,8 @@ services:
   backend:
     image: grupo5backend:1
     ports:
-      - target: 8080
-        published: 8080
+      - target: 8085
+        published: 8085
         protocol: tcp
         mode: host
     networks:
