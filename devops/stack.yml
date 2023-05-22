@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  backend:
+    image: grupo5backend:1
+    ports:
+      - target: 8080
+        published: 8080
+        protocol: tcp
+        mode: host
+    networks:
+      - proyecto_integrador
+  db:
+    image: postgres:15.0-bullseye
+    environment:
+      - TZ=America/Guayaquil
+      - POSTGRES_DB=proyecto_integrador
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - pg_grupo5_data:/var/lib/postgresql/data/pgdata
+    networks:
+      - proyecto_integrador
+           
+volumes:
+  pg_grupo5_data:
+    external: true
+
+networks:
+  proyecto_integrador:
+    external: true
+
+secrets:
+  db_dev_pass:
+    external: true  
