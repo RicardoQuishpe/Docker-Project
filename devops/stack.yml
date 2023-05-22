@@ -10,7 +10,7 @@ services:
         mode: host
     networks:
       - proyecto_integrador
-  db:
+  db5:
     image: postgres:15.0-bullseye
     environment:
       - TZ=America/Guayaquil
