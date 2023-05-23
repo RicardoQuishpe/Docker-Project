@@ -69,8 +69,4 @@ public class ProgramaController {
         return programaServices.findAll();
     }
 
-    @GetMapping ("/{id}/")
-    public Programa findById(@PathVariable long id){
-        return programaServices.findById(id);
-    }
 }
