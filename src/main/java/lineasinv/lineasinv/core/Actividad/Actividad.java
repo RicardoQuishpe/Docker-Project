@@ -1,6 +1,5 @@
 package lineasinv.lineasinv.core.Actividad;
 
-import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,8 +16,8 @@ import lombok.Data;
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String Nombre;
-    private LocalDate Fecha_inicio;
-    private LocalDate Fecha_final;
+    private String Fecha_inicio;
+    private String Fecha_final;
     private String Detalle;
 
     @ManyToOne
