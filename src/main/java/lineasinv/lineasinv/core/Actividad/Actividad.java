@@ -15,10 +15,10 @@ import lombok.Data;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String Nombre;
-    private String Fecha_inicio;
-    private String Fecha_final;
-    private String Detalle;
+    private String nombre;
+    private String fechaInicio;
+    private String fechaFinal;
+    private String detalle;
 
     @ManyToOne
     private Programa programa;

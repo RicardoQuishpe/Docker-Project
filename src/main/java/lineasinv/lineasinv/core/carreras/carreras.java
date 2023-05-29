@@ -13,7 +13,7 @@ public class carreras {
      @Id
      @GeneratedValue(strategy = GenerationType.AUTO)
      private long id;
-     private String nombre_carrera;
+     private String nombreCarrera;
      private String coordinador;
      private String semestres;
 }

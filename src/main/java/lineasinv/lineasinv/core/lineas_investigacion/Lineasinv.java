@@ -20,7 +20,7 @@ public class Lineasinv {
     private String nombre;
     private String encargado;
     private String estado;
-    private String fecha_aprob;
+    private String fechaAprob;
     
     @ManyToOne 
     private Programa programa;
